@@ -1,0 +1,103 @@
+/* ----------------------------------------------------------------
+   1. CSS Reset / 基本設定
+---------------------------------------------------------------- */
+* {
+    /* 讓 padding 和 border 不會撐大元素寬度 */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.6; /* 讓文字間距更舒適 */
+    color: #333; /* 預設文字顏色 */
+    background-color: #f4f4f4; /* 輕微的背景色 */
+}
+
+a {
+    text-decoration: none; /* 移除連結下底線 */
+    color: #007bff; /* 連結的顏色 */
+}
+
+/* ----------------------------------------------------------------
+   2. Header / 導覽列 樣式
+---------------------------------------------------------------- */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    font-weight: bold;
+    /* 簡單的 hover 效果 */
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* ----------------------------------------------------------------
+   3. Main / 內容區塊 樣式
+---------------------------------------------------------------- */
+main {
+    max-width: 1000px; /* 限制內容最大寬度 */
+    margin: 2rem auto; /* 內容置中 */
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px; /* 圓角效果 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------------------------------------------------------
+   4. Footer / 頁尾 樣式
+---------------------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+/* ----------------------------------------------------------------
+   5. Media Queries / 響應式設計 (針對手機)
+---------------------------------------------------------------- */
+@media (max-width: 600px) {
+    /* 調整主要內容區域的邊距，讓內容更貼近螢幕邊緣 */
+    main {
+        margin: 1rem auto;
+        padding: 0 1rem;
+    }
+
+    /* 將導覽列改為垂直堆疊 */
+    header nav a {
+        display: block; /* 讓每個連結佔滿整行 */
+        margin: 0.5rem 0; /* 增加連結間的垂直間距 */
+        padding: 0.5rem 0;
+    }
+
+    /* 調整頁首的 padding，讓手機畫面更緊湊 */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    /* 調整 Section 的 padding */
+    section {
+        padding: 1.5rem;
+    }
+}
